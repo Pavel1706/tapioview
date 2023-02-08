@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tapioview/static/css/main.2fa3fb60.css",
+    "main.js": "/tapioview/static/js/main.ed1bbb52.js",
+    "static/js/787.cc9e77c5.chunk.js": "/tapioview/static/js/787.cc9e77c5.chunk.js",
+    "index.html": "/tapioview/index.html",
+    "main.2fa3fb60.css.map": "/tapioview/static/css/main.2fa3fb60.css.map",
+    "main.ed1bbb52.js.map": "/tapioview/static/js/main.ed1bbb52.js.map",
+    "787.cc9e77c5.chunk.js.map": "/tapioview/static/js/787.cc9e77c5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2fa3fb60.css",
+    "static/js/main.ed1bbb52.js"
+  ]
+}
