@@ -6,16 +6,16 @@ const instance = axios.create({
 })
 
 export const postsAPI = {
-    getPosts(){
+    getPosts() {
         return instance.get<Array<PostType>>('posts')
     },
-    addPost(title:string, body: string){
-        return instance.post('posts', {title, body})
+    addPost(title: string, body: string) {
+        return instance.post('posts', { title, body })
     },
-    deletePost(id:number){
-        return instance.delete(`posts/${id}` )
+    deletePost(id: number) {
+        return instance.delete(`posts/${id}`)
     },
-    updatePost(id?: number, title?:string, body?:string){
-        return instance.put(`posts/${id}`, {title, body})
+    updatePost(id?: number, title?: string, body?: string) {
+        return instance.put(`posts/${id}`, { title, body })
     }
 }

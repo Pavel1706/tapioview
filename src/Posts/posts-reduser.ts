@@ -20,7 +20,7 @@ export const postsReducer = (state: Array<PostType> = initialState, action: AllP
         case 'DELETE-POST':
             return state.filter(post => post.id !== action.id)
         case 'UPDATE-POST':
-            return state.map(post => post.id === action.id ? {...post, title: action.title} : post)
+            return state.map(post => post.id === action.id ? { ...post, title: action.title } : post)
         default:
             return state
     }
@@ -46,7 +46,7 @@ const deletePostAC = (id: number) => {
         id
     } as const
 }
-const updatePostAC = (id?: number, title?:string) => {
+const updatePostAC = (id?: number, title?: string) => {
     return {
         type: 'UPDATE-POST',
         id,
@@ -80,7 +80,7 @@ export const addNewPostTC = (title: string, body: string) => {
 export const deletePostTC = (id: number) => {
     return (dispatch: Dispatch) => {
         postsAPI.deletePost(id)
-            .then((res) => {
+            .then(() => {
                 dispatch(deletePostAC(id))
             })
             .catch(error => {
@@ -88,10 +88,10 @@ export const deletePostTC = (id: number) => {
             })
     }
 }
-export const updatePostTC = (title:string, id: number) => {
+export const updatePostTC = (title: string, id: number) => {
     return (dispatch: Dispatch) => {
         postsAPI.updatePost(id!)
-            .then((res) => {
+            .then(() => {
                 dispatch(updatePostAC(id, title))
             })
             .catch(error => {
@@ -105,3 +105,4 @@ type AllPostsReducerType =
     | ReturnType<typeof addNewPostAC>
     | ReturnType<typeof deletePostAC>
     | ReturnType<typeof updatePostAC>
+
