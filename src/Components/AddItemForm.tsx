@@ -32,7 +32,6 @@ export function AddItemForm() {
     }
 
     const addItem = (title: string, body: string) => {
-        // @ts-ignore
         dispatch(addNewPostTC(title, body))
     }
 

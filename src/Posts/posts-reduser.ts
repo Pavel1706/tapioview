@@ -1,5 +1,6 @@
 import { postsAPI } from "../API/posts-api";
 import { Dispatch } from "redux";
+import { AppThunk } from "../store";
 
 
 export type PostType = {
@@ -54,8 +55,8 @@ const updatePostAC = (id?: number, title?: string) => {
     } as const
 }
 
-export const getPostsTC = () => {
-    return (dispatch: Dispatch) => {
+export const getPostsTC = ():AppThunk => {
+    return (dispatch) => {
         postsAPI.getPosts()
             .then((res) => {
                 dispatch(getPostsAC(res.data))

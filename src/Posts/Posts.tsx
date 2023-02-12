@@ -14,12 +14,10 @@ function Posts() {
 
 
     useEffect(() => {
-        // @ts-ignore
         dispatch(getPostsTC())
     }, [])
 
     const deletePost = (id: number) => {
-        // @ts-ignore
         dispatch(deletePostTC(id))
     }
 
